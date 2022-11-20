@@ -1,0 +1,200 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,300,600);
+
+/* * {
+	margin:0;
+	padding:0;
+	box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	-moz-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	-o-font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+} */
+
+body {
+	font-family:"Open Sans", Helvetica, Arial, sans-serif;
+	font-weight:300;
+	font-size: 12px;
+	line-height:30px;
+	color:#777;
+	/* background-color: #1d9f81; */
+}
+
+.container {
+	max-width:400px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea, #contact button[type="submit"] { font:400 12px/16px "Open Sans", Helvetica, Arial, sans-serif; }
+
+#contact {
+	background:#F9F9F9;
+	padding:25px;
+	margin:50px 0;
+}
+
+#contact h3 {
+	color: rgb(60, 201, 170);
+	display: block;
+	font-size: 30px;
+	font-weight: 400;
+}
+
+#contact h4 {
+	margin:5px 0 15px;
+	display:block;
+	font-size:13px;
+}
+
+fieldset {
+	border: medium none !important;
+	margin: 0 0 10px;
+	min-width: 100%;
+	padding: 0;
+	width: 100%;
+}
+
+#contact input[type="text"], #contact input[type="email"], #contact input[type="tel"], #contact input[type="url"], #contact textarea {
+	width:100%;
+	border:1px solid #CCC;
+	background:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+}
+
+#contact input[type="text"]:hover, #contact input[type="email"]:hover, #contact input[type="tel"]:hover, #contact input[type="url"]:hover, #contact textarea:hover {
+	-webkit-transition:border-color 0.3s ease-in-out;
+	-moz-transition:border-color 0.3s ease-in-out;
+	transition:border-color 0.3s ease-in-out;
+	border:1px solid #AAA;
+}
+
+#contact textarea {
+	height:100px;
+	max-width:100%;
+  resize:none;
+}
+
+#contact button[type="submit"] {
+	cursor:pointer;
+	width:100%;
+	border:none;
+	background:rgb(11, 98, 72);
+	color:#FFF;
+	margin:0 0 5px;
+	padding:10px;
+	font-size:15px;
+}
+
+#contact button[type="submit"]:hover {
+	background:rgb(147, 227, 187);
+	-webkit-transition:background 0.3s ease-in-out;
+	-moz-transition:background 0.3s ease-in-out;
+	transition:background-color 0.3s ease-in-out;
+}
+
+#contact button[type="submit"]:active { box-shadow:inset 0 1px 3px rgba(0, 0, 0, 0.5); }
+
+#contact input:focus, #contact textarea:focus {
+	outline:0;
+	border:1px solid #999;
+}
+::-webkit-input-placeholder {
+ color:#888;
+}
+:-moz-placeholder {
+ color:#888;
+}
+::-moz-placeholder {
+ color:#888;
+}
+:-ms-input-placeholder {
+ color:#888;
+}
+#nav-top {
+
+  text-align: center;
+  margin: 40px;
+  padding: 5px;
+  background-color: #1d9f81;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#nav-top ul li {
+  display: inline-block;
+  /* background-color: #1d9f81; */
+
+}
+
+#nav-top ul li a:link, #nav-top ul li a:visited {
+  /* color: #404040; */
+  text-decoration: white;
+  padding-left: 10px;
+  color: #ffffff;
+}
+
+#nav-top ul li a:hover {
+  /* text-decoration: underline; */
+  color: #000;
+  /* width: 100px; */
+  display: block;
+  font-size: 17px;
+
+}
+footer {
+  background-color: #1d9f81;
+  /* position: fixed; */
+  /* margin-left :-12px; */
+  bottom: 0;
+  /* width: 72%; */
+
+}
+
+footer nav {
+  padding: 20px;
+
+}
+
+footer nav ul {
+  float: left;
+
+}
+
+#right-menu {
+  float: right;
+  color:white;
+}
+
+#center-menu{
+  text-align: center;
+}
+
+#nav-bottom ul li {
+  display: flex;
+  color:white;
+
+}
+
+#nav-bottom ul li a:link, #nav-bottom ul li a:visited {
+  color: rgb(34, 33, 33)
+  padding-left;
+
+}
+
+#nav-bottom ul li a:hover {
+  text-decoration: underline;
+
+}
+#link,a{
+  color: white;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

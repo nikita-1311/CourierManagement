@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="contact.component.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+      <div class="container">
+          <a class="navbar-brand p-1 text-white">ASD(Ace Speed Delivery)</a>
+          <div class="collapse navbar-collapse" id="navcollapse">
+              <ul class="navbar-nav ml-auto">
+                  <li class="nav-item">
+                      <a routerLink="/login" class="nav-link">
+                          <!-- <i class="fas fa-user-plus"></i> Login -->
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+  </nav>
+  <header class="headersection text-white py-0">
+    <div class="">
+        <h5>
+            <nav id="nav-top">
+              <ul>
+                <li><span><a routerLink="/service">Our Services &nbsp;</a></span></li>
+                <li><span><a  routerLink="/about"> &nbsp; About Us &nbsp;</a></span></li>
+                <li><span><a routerLink="/contact">&nbsp; Contact Us &nbsp;</a></span></li>
+                <li><span><a routerLink="/track">&nbsp; Track Courier &nbsp;</a></span></li>
+                <li><span><a routerLink="/pickup">&nbsp; PickUpRequest &nbsp;</a></span></li>
+                <!-- <li id="sign-in"><span><a routerLink="/login">&nbsp; Log in</a></span></li> -->
+              </ul>
+            </nav>
+        </h5>
+    </div>
+  </header>
+  <section>
+  <div class="container">
+    <form id="contact" action="" method="post" [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+      <h3>Quick Contact</h3>
+      <h4>Contact us today, and get reply with in 24 hours!</h4>
+  <!-- <fieldset>
+    <input placeholder="Your ID" type="text" tabindex="1" required autofocus class="form-control" formControlName="contactId">
+  </fieldset> -->
+  <fieldset>
+    <input placeholder="Your name" type="text" tabindex="1" required autofocus class="form-control" formControlName="name">
+  </fieldset>
+  <fieldset>
+    <input placeholder="Your Email Address" type="email" tabindex="2" required class="form-control" formControlName="email">
+  </fieldset>
+  <fieldset>
+    <input placeholder="Your Phone Number" type="tel" tabindex="3" required class="form-control" formControlName="mobileNo">
+  </fieldset>
+  <fieldset>
+    <textarea placeholder="Type your Message Here...." tabindex="5" required class="form-control" formControlName="message"></textarea>
+  </fieldset>
+  <div class="input-group">
+    <button [disabled]="contactForm.invalid" type="submit" class="btn btn-primary" (click)="SaveContact()">Save</button>
+</div>
+</form>
+
+</div>
+</section>
+<footer>
+  <nav id="nav-bottom" class="clearfix">
+    <ul class="left-menu">
+      <li id="link"><a routerLink="/our-services">Services</a></li><br/>
+      <li id="link"><a routerLink="/shipment">Track Orders</a></li><br/>
+      <li id="link"><a routerLink="/about-us">About Us</a></li>
+    </ul>
+    <ul id="right-menu">
+      <li> <a routerLink="/contact-us"> Have a Business Enquiry? Write us here</a></li><br/><br/>
+      <li>Monday-Friday : 9:00 AM to 8:00</li><br/>
+      <li>Saturday-Sunday : 10:00AM to 7:00</li>
+    </ul>
+    <ul id="center-menu">
+      <li>   Contact</li><br/>
+      <li>  +91 1234567890</li>
+    </ul>
+  </nav>
+</footer>
+</body>
+</html>

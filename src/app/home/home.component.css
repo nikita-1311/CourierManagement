@@ -1,0 +1,181 @@
+/* Courier CSS */
+* {
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 13px;
+  }
+
+  /* Top Navigation Bar */
+  #nav-top {
+
+    text-align: center;
+    margin: 40px;
+    padding: 5px;
+    background-color: #1d9f81;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+  #nav-top ul li {
+    display: inline-block;
+    /* background-color: #1d9f81; */
+
+  }
+
+  #nav-top ul li a:link, #nav-top ul li a:visited {
+    /* color: #404040; */
+    text-decoration: white;
+    padding-left: 10px;
+    color: #ffffff;
+  }
+
+  #nav-top ul li a:hover {
+    /* text-decoration: underline; */
+    color: #000;
+    /* width: 100px; */
+    display: block;
+    font-size: 17px;
+
+  }
+
+  #nav-top li#sign-in a:link, #nav-top li#sign-in a:visited {
+    /* background-color: #4380ef; */
+
+    color: #ffffff;
+    margin: 10px;
+    padding: 5px 11px;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* border: -10px solid #538ae2; */
+    outline:none;
+  }
+
+  #container {
+    -webkit-animation-name: container;
+            animation-name: container;
+    -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-delay: 1s;
+            animation-delay: 1s;
+    overflow: hidden;
+    display: run-in;
+    flex-wrap: wrap;
+    width: 580px;
+    margin: 90px auto 0;
+
+
+  }
+
+  #logo {
+    flex: 1;
+    background: linear-gradient(to right, #06f5bd 0%, #08fd4d 100%);
+    transition: 1s;
+    background-image: url('https://img.freepik.com/free-vector/loading-workman-carrying-boxes_74855-14096.jpg?w=2000');
+    background-position: initial;
+    width: 400px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+  }
+
+  /* Search input */
+  input[type="search"] {
+    width: 566px;
+    padding: 7px;
+    margin: 25px 0 18px;
+    border: solid 1px #ebebeb;
+    font-size: 20px;
+  }
+  input[type="search"]:hover {
+    border-color: #aaa;
+  }
+
+  /* Search button */
+  input[type="submit"] {
+    background-color: rgb(44, 155, 175);
+    color: white;
+    border: 1px solid #f2f2f2;
+    padding: 10px;
+    margin: 0 3px;
+    font-family: Arial, sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  input[type="submit"]:hover {
+    background-color: rgb(44, 155, 175);
+    color: #000;
+    border: 1px solid #b5e7ee;
+    cursor: pointer;
+  }
+
+  /* Footer */
+  footer {
+    background-color: #1d9f81;
+    /* position: fixed; */
+    /* margin-left :-12px; */
+    bottom: 0;
+    /* width: 72%; */
+
+  }
+
+  footer nav {
+    padding: 20px;
+
+  }
+
+  footer nav ul {
+    float: left;
+
+  }
+
+  #right-menu {
+    float: right;
+    color:white;
+  }
+
+  #center-menu{
+    text-align: center;
+  }
+
+  #nav-bottom ul li {
+    display: flex;
+    color:white;
+
+  }
+
+  #nav-bottom ul li a:link, #nav-bottom ul li a:visited {
+    color: rgb(34, 33, 33)
+    padding-left;
+
+  }
+
+  #nav-bottom ul li a:hover {
+    text-decoration: underline;
+
+  }
+  #link,a{
+    color: white;
+  }
+
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  @keyframes container {
+    0% {
+      opacity: 0;
+      width: 0;
+    }
+    100% {
+      opacity: 1;
+      padding: 20px 40px;
+      width: 440px;
+    }
+  }

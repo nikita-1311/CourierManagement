@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" crossorigin="anonymous" />
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="pickup.component.css">
+  <title>Courier</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <div class="container text-white">
+        <a class="navbar-brand p-1">ASD(Ace Speed Delivery)</a>
+          </div>
+  </nav>
+<section class="addsection bg-light py-3">
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Courier Form</h4>
+  </div>
+  <div class="modal-body">
+    <div class="form-group">
+    <form [formGroup]="customerForm" (ngSubmit)="SaveCustomer()">
+      <!-- <div class="mb-3">
+        <label>ID</label>
+          <div class="input-group">
+            <input name="trackId" class="form-control" formControlName="trackId" >
+          </div>
+        </div> -->
+            <div class="mb-3">
+        <label>Name</label>
+          <div class="input-group">
+            <input name="custName" class="form-control" formControlName="custName" >
+            <div class="form-text text-danger" *ngIf="custName.errors?.['required'] && (custName.touched || custName.dirty)">
+            Name is required.
+            </div>
+            <div class="form-text text-danger" *ngIf="custName.errors?.['minlength'] && (custName.touched || custName.dirty)">
+              Name is too short
+            </div>
+            <div class="form-text text-danger" *ngIf="custName.errors?.['pattern'] && (custName.dirty || custName.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Email</label>
+          <div class="input-group">
+            <input name="email" class="form-control" formControlName="email">
+            <div class="form-text text-danger" *ngIf="email.errors?.['required'] && email.touched">
+              Details needed
+            </div>
+            <div class="form-text text-danger" *ngIf="email.errors?.['email'] && (email.dirty || email.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Mobile</label>
+          <div class="input-group">
+            <input name="mobile" class="form-control" formControlName="mobile">
+            <div class="form-text text-danger" *ngIf="mobile.errors?.['required'] && mobile.touched">
+              Details needed
+            </div>
+            <div class="form-text text-danger" *ngIf="mobile.errors?.['pattern'] && (mobile.dirty || mobile.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Address</label>
+          <div class="input-group">
+            <input name="address" class="form-control" formControlName="address">
+            <div class="form-text text-danger" *ngIf="address.errors?.['required'] && address.touched">
+              Details needed
+            </div>
+            <div class="form-text text-danger" *ngIf="address.errors?.['pattern'] && (address.dirty || address.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Courier Name</label>
+          <div class="input-group">
+            <input name="courName" class="form-control" formControlName="courName">
+            <div class="form-text text-danger" *ngIf="courName.errors?.['required'] && courName.touched">
+              Details needed
+            </div>
+            <div class="form-text text-danger" *ngIf="courName.errors?.['pattern'] && (courName.dirty || courName.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Docket</label>
+          <div class="input-group">
+            <input name="docket" class="form-control" formControlName="docket">
+            <div class="form-text text-danger" *ngIf="docket.errors?.['required'] && docket.touched">
+              Details needed
+            </div>
+            <div class="form-text text-danger" *ngIf="docket.errors?.['pattern'] && (docket.dirty || docket.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>From City</label>
+          <div class="input-group">
+            <input name="fromCity" class="form-control" formControlName="fromCity">
+            <div class="form-text text-danger" *ngIf="fromCity.errors?.['required'] && fromCity.touched">
+              This field is required
+            </div>
+            <div class="form-text text-danger" *ngIf="fromCity.errors?.['pattern'] && (fromCity.dirty || fromCity.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>To City</label>
+          <div class="input-group">
+            <input name="toCity" class="form-control" formControlName="toCity" >
+            <div class="form-text text-danger" *ngIf="toCity.errors?.['required'] && toCity.touched">
+              This field is required
+            </div>
+            <div class="form-text text-danger" *ngIf="toCity.errors?.['pattern'] && (toCity.dirty || toCity.touched)">
+              Incorrect Format
+            </div>
+          </div>
+      </div>
+      <div class="mb-3">
+        <label>Date</label>
+          <div class="input-group">
+            <input name="date" class="form-control" formControlName="date" >
+          </div>
+      </div>
+      <div class="mb-3">
+        <div class="input-group">
+          <button [disabled]="customerForm.invalid" type="submit" class="btn btn-primary">Save</button>
+        </div>
+      </div>
+    </form>
+  </div>
+
+
+
